@@ -5,17 +5,21 @@ spring:
   mail:
     host: localhost
     port: 3025
+    protocol: smtp
     username: ""
     password: ""
     properties:
       mail.smtp.auth: false
       mail.smtp.starttls.enable: false
+      mail.smtp.ssl.enable: false
+      mail.transport.protocol: smtp
 
   kafka:
     bootstrap-servers: ${spring.embedded.kafka.brokers}
 
 app:
   kafka:
+    enabled: false
+    bootstrap-servers: ${spring.embedded.kafka.brokers}
     topic:
       users-events: users.events
-rs: 127.0.0.1:9092
