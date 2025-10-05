@@ -1,0 +1,17 @@
+spring:
+  mail:
+    host: smtp.yandex.ru
+    port: 465
+    username: vitraispn@yandex.ru
+    password: soxfoydscknzgkgm
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.ssl.enable: true
+    default-encoding: UTF-8
+    test-connection: false
+
+server:
+  port: 8081
+
+
+
