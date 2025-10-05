@@ -3,7 +3,7 @@ spring:
     host: smtp.yandex.ru
     port: 465
     username: vitraispn@yandex.ru
-    password: soxfoydscknzgkgm
+    password: ${MAIL_PASSWORD}
     properties:
       mail.smtp.auth: true
       mail.smtp.ssl.enable: true
