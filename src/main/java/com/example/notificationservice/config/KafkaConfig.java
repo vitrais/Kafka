@@ -22,7 +22,7 @@ public class KafkaConfig {
     public ConsumerFactory<String, UserEvent> userEventConsumerFactory(org.springframework.core.env.Environment env) {
         Map<String, Object> props = new HashMap<>();
         props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG,
-                env.getProperty("app.kafka.bootstrap-servers", "localhost:9092"));
+                env.getRequiredProperty("spring.kafka.bootstrap-servers"));
         props.put(ConsumerConfig.GROUP_ID_CONFIG, "notification-service");
         props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
 
